@@ -26,9 +26,13 @@ ros2 run ros2_bag_to_image ros2_bag_to_image
 
 By default, this package comes with a few ROS bags recorded from the Turtlebot3 burger robot, placed at various angles and distances relative to a checkerboard. After running, the following code will display:
 
-![ROS2 Extracted Images](readme_pictures/ros2_image_files.png)
+<p align="center">
+<img src="readme_pictures/ros2_image_files.png" width="400">
+</p>
 
 Opening one of these images will look like:
 
-![ROS2 Example Image](readme_pictures/3.png)
+<p align="center">
+<img src="readme_pictures/3.png" width="400">
+</p>
 
