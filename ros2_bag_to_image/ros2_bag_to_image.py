@@ -10,7 +10,7 @@ import cv_bridge
 from pathlib import Path
 home = Path.home()
 
-class SimpleBagReader(Node):
+class BagToImage(Node):
 
     def __init__(self):
         super().__init__('ros2_bag_to_image')
@@ -55,7 +55,7 @@ class SimpleBagReader(Node):
 def main(args=None):
     try:
         rclpy.init(args=args)
-        sbr = SimpleBagReader()
+        sbr = BagToImage()
         rclpy.spin(sbr)
     except (KeyboardInterrupt, ExternalShutdownException):
         pass
