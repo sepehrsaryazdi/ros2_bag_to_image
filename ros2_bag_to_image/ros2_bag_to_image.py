@@ -18,7 +18,9 @@ class SimpleBagReader(Node):
         self.publisher = self.create_publisher(Image, '/image', 10) # publisher for real-time monitoring if necessary
 
         bags_location = f'{home}/ros2_ws/src/ros2_bag_to_image/bags/'
-        image_save_location = f'{home}/ros2_ws/src/ros2_bag_to_image/images/'
+        images_location = f'{home}/ros2_ws/src/ros2_bag_to_image/images/'
+        if not os.path.exists(images_location):
+            os.mkdir(images_location)
         for bag_file_name in os.listdir(bags_location):
             self.get_logger().info('Processing ' + bag_file_name + 'bag file.')
             self.reader = rosbag2_py.SequentialReader()
@@ -29,7 +31,7 @@ class SimpleBagReader(Node):
             converter_options = rosbag2_py.ConverterOptions('', '')
             self.reader.open(storage_options, converter_options)
 
-            save_image_location = image_save_location + bag_file_name + '/'
+            save_image_location = images_location + bag_file_name + '/'
             if not os.path.exists(save_image_location):
                 os.mkdir(save_image_location)
             self.extract_image(save_image_location)
