@@ -8,7 +8,7 @@ To install, run the following code:
 
 ```
 cd ~/ros2_ws/src
-git clone git@github.com:sepehrsaryazdi/ros2_bag_to_image.git
+git clone https://github.com/sepehrsaryazdi/ros2_bag_to_image.git
 cd ..
 colcon build --packages-select ros2_bag_to_image
 source install/setup.bash
