@@ -45,7 +45,7 @@ class BagToImage(Node):
             decoded_data = deserialize_message(msg[1], Image) # get serialized version of message and decode it
             cvbridge = cv_bridge.CvBridge()
             cv_image = cvbridge.imgmsg_to_cv2(decoded_data, desired_encoding='passthrough') # change ROS2 Image to cv2 image
-            cv_image = cv2.cvtColor(cv_image, cv2.COLOR_RGB2BGR) # changes image encoding from RGB to BGR for cv2.imwrite to work correctly
+            cv_image = cv2.cvtColor(cv_image, cv2.COLOR_RGB2BGR) # changes image encoding from RGB to BGR for cv2.imwrite to work correctly with the default bags, but may need to comment this out if the imported image has the correct encoding upon import
             file_location = save_image_location + str(image_counter) + ".png"
             cv2.imwrite(file_location, cv_image)
             self.publisher.publish(msg[1])
