@@ -16,7 +16,7 @@ source install/setup.bash
 
 ## Usage
 
-To use this package, place the desired bags in `~/ros2_ws/src/ros2_bag_to_image/bags/` and delete `~/ros2_ws/src/ros2_bag_to_image/images/`. Ensure that the `$HOME` path variable is set correctly. Then, run the following:
+To use this package, place the ROS bags in `~/ros2_ws/src/ros2_bag_to_image/bags/` and delete `~/ros2_ws/src/ros2_bag_to_image/images/`. Ensure that the `$HOME` path variable is set correctly. Then, run the following:
 
 ```
 ros2 run ros2_bag_to_image ros2_bag_to_image
@@ -24,7 +24,7 @@ ros2 run ros2_bag_to_image ros2_bag_to_image
 
 ## Example
 
-By default, this package comes with a few ROS bags recorded from the Turtlebot3 burger robot, placed at various angles and distances relative to a checkerboard. After running, the following code will display:
+By default, this package comes with a few ROS bags recorded from the TurtleBot3 burger robot, placed at various angles and distances relative to a checkerboard. After running, the following code will display:
 
 <p align="center">
 <img src="readme_pictures/ros2_image_files.png" width="400">
