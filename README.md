@@ -24,7 +24,7 @@ ros2 run ros2_bag_to_image ros2_bag_to_image
 
 ## Example
 
-By default, this package comes with a few ROS bags recorded from the TurtleBot3 burger robot, placed at various angles and distances relative to a checkerboard. After running, the following code will display:
+By default, this package comes with a few ROS bags recorded from the TurtleBot3 burger robot, placed at various angles and distances relative to a checkerboard. After running, the following images will appear:
 
 <p align="center">
 <img src="readme_pictures/ros2_image_files.png" width="400">
